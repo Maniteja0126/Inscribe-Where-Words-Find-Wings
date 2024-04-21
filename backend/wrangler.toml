@@ -2,5 +2,5 @@ name = "backend"
 compatibility_date = "2023-12-01"
 
 [vars]
-DATA_URL=""
-JWT_SECRET = ""
+DATA_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiNTc0ZWQwMTktYTdlOC00NjUyLTkzMmEtNTNkODNkOGQyZjNkIiwidGVuYW50X2lkIjoiYWZhOGJhNjMxNDIyMzA4ZGJlYTk0NzcwNzM1ODIyNGFjY2M2NzM5MjFhMzFlOTY5MWYxZGJlN2ViZTVjNDViNCIsImludGVybmFsX3NlY3JldCI6Ijc0ZjY3YWY3LThkNzQtNGIyYy04MmEyLWMyN2NhYjFjMTQyOSJ9.UdFV8qxYL_KpqtxAE5bpWjufh0gDlKIET1I322ehDGs"
+JWT_SECRET = "maniteja123456"
