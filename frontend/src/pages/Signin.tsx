@@ -8,6 +8,7 @@ import ButtomMessage from "@/components/ButtonMessage";
 import { toast, Toaster } from "sonner";
 import { BACKEND_URL } from "@/config";
 
+
 export  const Signin = () => {
   const navigate = useNavigate();
   const [requiredError, setRequiredError] = useState({
@@ -32,7 +33,7 @@ export  const Signin = () => {
         `${BACKEND_URL}/api/v1/user/signin`,
         signinInputs
       );
-      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("token", res.data);
       navigate("/blogs");
     } catch (error) {
       return toast("Error Signing in", {
@@ -49,7 +50,7 @@ export  const Signin = () => {
       <div className="z-10">
         <div className="max-w-md w-full mx-auto rounded-xl md:rounded-2xl p-4 md:p-8 pb-1 md:pb-1 shadow-input bg-white dark:bg-black">
           <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-            Welcome to Daily Blogs
+            Welcome to Inscribe
           </h2>
           <p className="text-neutral-600 text-sm max-w-sm mt-2 mr-10 dark:text-neutral-300">
             Enter your information to signin to your account

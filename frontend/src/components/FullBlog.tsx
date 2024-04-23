@@ -19,9 +19,9 @@ export const FullBlog = ({ blog }: { blog: Blog }) => {
                   <div className="text-5xl font-extrabold text-white  lg:w-full ">
                     {blog.title}
                   </div>
-                  <div className="text-zinc-400 pt-2">
+                  {/* <div className="text-zinc-400 pt-2">
                     {`Post on ${blog.Date}`}
-                  </div>
+                  </div> */}
                   <div className="pt-4 text-zinc-300 lg:w-full">
                     {blog.content}
                   </div>
@@ -42,8 +42,9 @@ export const FullBlog = ({ blog }: { blog: Blog }) => {
                         {blog.author.name || "Anonymous"}
                       </div>
                       <div className="pt-2 text-zinc-300 w-96 lg:w-full">
-                        Random catch phrase about the author's ability to grab
-                        the user's attention
+                        Wordsmith extraordinaire, conjuring worlds of wonder
+                        with each stroke of the keyboard, leaving readers
+                        spellbound in the magic of storytelling.
                       </div>
                     </div>
                   </div>

@@ -8,7 +8,11 @@ export const Appbar = () => {
         to={"/blogs"}
         className="flex flex-col justify-center cursor-pointer text-white text-xl"
       >
-        Daily Blogs
+        {" "}
+        <div className="flex">
+          <img src="logo.png" alt="" width={30} />
+          Inscribe
+        </div>
       </Link>
       <div>
         <Link to={"/publish"}>
