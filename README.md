@@ -41,7 +41,7 @@ Navigate to the project directory
     npm install
 3. Set up environment variables:
 <br/>
-- Cloudflare Workers: Update the environment variables in your Cloudflare account dashboard with your specific details (e.g., DATA_URL , JWT_SECRET). <br/>
+- Cloudflare Workers: Update the environment variables in your Cloudflare account       dashboard with your specific details (e.g., DATA_URL , JWT_SECRET). <br/>
 - Configure PostgreSQL connection settings in .env file.
 
 4. Deploy backend on Cloudflare Workers:
