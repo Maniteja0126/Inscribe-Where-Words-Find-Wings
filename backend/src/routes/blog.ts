@@ -45,22 +45,28 @@ blogRouter.post('/',async(c)=>{
             message : "Invalid credentials"
         })
     }
+    try {
+        const prisma = new PrismaClient({
+            datasourceUrl: c.env.DATA_URL,
+          }).$extends(withAccelerate())
+    
+        const blog = await prisma.post.create({
+             data:{
+                title : body.title,
+                content : body.content,
+                authorId : authorId
+            }
+        })
+        return c.json({
+            id:blog.id
+        })
+      
+    } catch (error) {
+        console.log("error from post/publish" , error);
+        return c.json({error : error})
+    }
+})
 
-    const prisma = new PrismaClient({
-        datasourceUrl: c.env.DATA_URL,
-      }).$extends(withAccelerate())
-
-    const blog = await prisma.post.create({
-         data:{
-            title : body.title,
-            content : body.content,
-            authorId : authorId
-        }
-    })
-    return c.json({
-        id:blog.id
-    })
-  })
   
 
 blogRouter.put('/',async(c)=>{
