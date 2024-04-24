@@ -10,6 +10,8 @@ import { BACKEND_URL } from "@/config";
 
 
 export  const Signin = () => {
+  // const BACKEND_URL = import.meta.env.BACKEND_URL
+  console.log("URL : ",BACKEND_URL)
   const navigate = useNavigate();
   const [requiredError, setRequiredError] = useState({
     emailReq: false,
@@ -36,6 +38,7 @@ export  const Signin = () => {
       localStorage.setItem("token", res.data);
       navigate("/blogs");
     } catch (error) {
+      console.log("Error : " , error)
       return toast("Error Signing in", {
         action: {
           label: "Close",

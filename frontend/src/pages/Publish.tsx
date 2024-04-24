@@ -7,14 +7,17 @@ import { toast, Toaster } from "sonner";
 import { BACKEND_URL } from "@/config";
 
 
+
 export const Publish = () => {
+
+  // const BACKEND_URL = import.meta.env.BACKEND_URL;
+  
   const navigate = useNavigate();
   const [buffer, setBuffer] = useState(true);
 
   const [postInputs, setPostInputs] = useState<CreateBlogInput>({
     title: "",
     content: "",
-    // Date: Date(),
   });
 
   useEffect(() => {
@@ -25,6 +28,7 @@ export const Publish = () => {
       setBuffer(false);
     }
   }, []);
+
   if (buffer) {
     return <div></div>;
   }
@@ -32,7 +36,7 @@ export const Publish = () => {
   const publishPost = async () => {
     try {
       const response = await axios.post(
-        `${BACKEND_URL}/api/v1/blog/`,
+        `${BACKEND_URL}/api/v1/blog`,
         postInputs,
         {
           headers: {
@@ -42,6 +46,7 @@ export const Publish = () => {
       );
       navigate(`/blog/${response.data.id}`);
     } catch (error) {
+      console.log("error from publish : ",error)
       return toast("Error while publishing", {
         action: {
           label: "Close",

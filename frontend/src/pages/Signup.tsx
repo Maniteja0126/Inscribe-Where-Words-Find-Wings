@@ -10,8 +10,10 @@ import ButtomMessage from "@/components/ButtonMessage";
 import { toast, Toaster } from "sonner";
 import { BACKEND_URL } from "@/config";
 
-export const  Signup = () => {
 
+
+export const  Signup = () => {
+  // const BACKEND_URL = import.meta.env.BACKEND_URL
   const navigate = useNavigate();
   const [requiredError, setRequiredError] = useState({
     emailReq: false,
